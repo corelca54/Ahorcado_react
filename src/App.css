@@ -1,0 +1,393 @@
+/* App.css */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Estilos para los logos (mantenidos del original) */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Estilos para el juego del ahorcado */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+  min-height: 100vh;
+  color: white;
+}
+
+.App {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.encabezado-app {
+  margin-bottom: 30px;
+}
+
+.encabezado-app h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.encabezado-app p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
+
+.tarjeta {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.tarjeta button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.contenedor-juego {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.seccion-ahorcado {
+  margin-bottom: 40px;
+  position: relative;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.contenedor-ahorcado {
+  position: relative;
+  width: 200px;
+  height: 250px;
+}
+
+/* Partes del ahorcado - CORREGIDAS */
+.base-ahorcado {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 10px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.poste-ahorcado {
+  position: absolute;
+  bottom: 10px; /* Comienza desde la base */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 200px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.travesano-ahorcado {
+  position: absolute;
+  top: 10px; /* Alineado con la parte superior del poste */
+  left: 50%;
+  width: 100px;
+  height: 10px;
+  background-color: white;
+  border-radius: 5px;
+  transform: translateX(-100%); /* Extiende hacia la izquierda */
+}
+
+.cuerda-ahorcado {
+  position: absolute;
+  top: 20px; /* Debajo del travesaño */
+  left: calc(50% - 100px); /* Alineado con el extremo del travesaño */
+  width: 5px;
+  height: 40px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+/* Partes del cuerpo - CORREGIDAS para colgar de la cuerda */
+.cabeza-ahorcado {
+  position: absolute;
+  top: 60px; /* Debajo de la cuerda */
+  left: calc(50% - 100px + 2.5px); /* Centrado con la cuerda */
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  border: 5px solid white;
+  border-radius: 50%;
+}
+
+.cuerpo-ahorcado {
+  position: absolute;
+  top: 100px; /* Debajo de la cabeza */
+  left: calc(50% - 100px + 2.5px);
+  transform: translateX(-50%);
+  width: 10px;
+  height: 60px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.brazo-izquierdo-ahorcado, .brazo-derecho-ahorcado {
+  position: absolute;
+  top: 110px;
+  width: 40px;
+  height: 10px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.brazo-izquierdo-ahorcado {
+  left: calc(50% - 100px + 2.5px - 20px);
+  transform: rotate(-30deg);
+}
+
+.brazo-derecho-ahorcado {
+  left: calc(50% - 100px + 2.5px + 10px);
+  transform: rotate(30deg);
+}
+
+.pierna-izquierda-ahorcado, .pierna-derecha-ahorcado {
+  position: absolute;
+  top: 155px;
+  width: 40px;
+  height: 10px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.pierna-izquierda-ahorcado {
+  left: calc(50% - 100px + 2.5px - 20px);
+  transform: rotate(30deg);
+}
+
+.pierna-derecha-ahorcado {
+  left: calc(50% - 100px + 2.5px + 10px);
+  transform: rotate(-30deg);
+}
+
+.letras-incorrectas {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-align: right;
+  background-color: rgba(255, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.seccion-palabra {
+  margin-bottom: 40px;
+}
+
+.palabra {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 2rem;
+  letter-spacing: 5px;
+  font-weight: bold;
+}
+
+.letra {
+  min-width: 30px;
+  border-bottom: 3px solid #ffffff;
+  padding-bottom: 5px;
+}
+
+.seccion-teclado {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.tecla {
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tecla:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.4);
+  transform: scale(1.1);
+}
+
+.tecla.correcta {
+  background-color: #4caf50;
+}
+
+.tecla.incorrecta {
+  background-color: #f44336;
+}
+
+.tecla:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.notificacion {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  animation: aparecerDesaparecer 2s forwards;
+}
+
+@keyframes aparecerDesaparecer {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.modal-resultado {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.contenido-resultado {
+  background: linear-gradient(135deg, #1a2a6c, #b21f1f);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  max-width: 500px;
+  width: 90%;
+}
+
+.contenido-resultado h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.contenido-resultado p {
+  margin-bottom: 30px;
+  font-size: 1.2rem;
+}
+
+.boton-reiniciar {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.boton-reiniciar:hover {
+  background-color: #388e3c;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #root {
+    padding: 1rem;
+  }
+  
+  .encabezado-app h1 {
+    font-size: 2rem;
+  }
+  
+  .tecla {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+  }
+  
+  .palabra {
+    font-size: 1.5rem;
+  }
+  
+  .contenedor-ahorcado {
+    transform: scale(0.8);
+  }
+  
+  .logo {
+    height: 4em;
+    padding: 1em;
+  }
+}
