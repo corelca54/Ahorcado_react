@@ -174,15 +174,6 @@ function App() {
         <p>escoge las letras corrrectas y arma la palabra oculta</p>
 
         
-        {/* Logos de Vite y React (mantenidos del código original) */}
-        <div>
-          <a href="https://vite.dev" target="_blank">
-            <img src={viteLogo} className="logo" alt="Vite logo" />
-          </a>
-          <a href="https://react.dev" target="_blank">
-            <img src={reactLogo} className="logo react" alt="React logo" />
-          </a>
-        </div>
         
         {/* Contador de ejemplo (mantenido del código original) */}
         <div className="tarjeta">
@@ -271,7 +262,9 @@ function App() {
       
       {/* Mensaje del ejemplo original */}
       <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+       © {new Date().getFullYear()} <a href="URL_DE_TU_PORTAFOLIO" target="_blank">Eccdeveloper</a>. Todos los derechos reservados.
+
+
       </p>
     </div>
   )
