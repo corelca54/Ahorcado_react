@@ -201,7 +201,7 @@ function App() {
           {renderizarAhorcado()}
           <div className="letras-incorrectas">
             <p>Letras incorrectas: {letrasIncorrectas.join(', ')}</p>
-            <p>Intentos restantes: {9 - letrasIncorrectas.length}</p>
+            <p>Intentos restantes: {6- letrasIncorrectas.length}</p>
           </div>
         </div>
 
