@@ -120,7 +120,7 @@ body {
   height: 250px;
 }
 
-/* Partes del ahorcado - CORREGIDAS */
+/* Partes del ahorcado - CORREGIDAS PARA POSICIÓN VERTICAL */
 .base-ahorcado {
   position: absolute;
   bottom: 0;
@@ -134,7 +134,7 @@ body {
 
 .poste-ahorcado {
   position: absolute;
-  bottom: 10px; /* Comienza desde la base */
+  bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
   width: 10px;
@@ -145,30 +145,31 @@ body {
 
 .travesano-ahorcado {
   position: absolute;
-  top: 10px; /* Alineado con la parte superior del poste */
+  top: 10px;
   left: 50%;
+  transform: translateX(-50%);
   width: 100px;
   height: 10px;
   background-color: white;
   border-radius: 5px;
-  transform: translateX(-100%); /* Extiende hacia la izquierda */
 }
 
 .cuerda-ahorcado {
   position: absolute;
-  top: 20px; /* Debajo del travesaño */
-  left: calc(50% - 100px); /* Alineado con el extremo del travesaño */
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 5px;
   height: 40px;
   background-color: white;
   border-radius: 2px;
 }
 
-/* Partes del cuerpo - CORREGIDAS para colgar de la cuerda */
+/* Partes del cuerpo - CORREGIDAS para colgar de la cuerda en el eje Y */
 .cabeza-ahorcado {
   position: absolute;
   top: 60px; /* Debajo de la cuerda */
-  left: calc(50% - 100px + 2.5px); /* Centrado con la cuerda */
+  left: 50%;
   transform: translateX(-50%);
   width: 40px;
   height: 40px;
@@ -179,7 +180,7 @@ body {
 .cuerpo-ahorcado {
   position: absolute;
   top: 100px; /* Debajo de la cabeza */
-  left: calc(50% - 100px + 2.5px);
+  left: 50%;
   transform: translateX(-50%);
   width: 10px;
   height: 60px;
@@ -189,7 +190,7 @@ body {
 
 .brazo-izquierdo-ahorcado, .brazo-derecho-ahorcado {
   position: absolute;
-  top: 110px;
+  top: 110px; /* Alineado con la parte superior del cuerpo */
   width: 40px;
   height: 10px;
   background-color: white;
@@ -197,18 +198,18 @@ body {
 }
 
 .brazo-izquierdo-ahorcado {
-  left: calc(50% - 100px + 2.5px - 20px);
+  left: calc(50% - 20px);
   transform: rotate(-30deg);
 }
 
 .brazo-derecho-ahorcado {
-  left: calc(50% - 100px + 2.5px + 10px);
+  left: calc(50% - 20px);
   transform: rotate(30deg);
 }
 
 .pierna-izquierda-ahorcado, .pierna-derecha-ahorcado {
   position: absolute;
-  top: 155px;
+  top: 155px; /* Debajo del cuerpo */
   width: 40px;
   height: 10px;
   background-color: white;
@@ -216,12 +217,12 @@ body {
 }
 
 .pierna-izquierda-ahorcado {
-  left: calc(50% - 100px + 2.5px - 20px);
+  left: calc(50% - 20px);
   transform: rotate(30deg);
 }
 
 .pierna-derecha-ahorcado {
-  left: calc(50% - 100px + 2.5px + 10px);
+  left: calc(50% - 20px);
   transform: rotate(-30deg);
 }
 
