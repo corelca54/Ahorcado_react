@@ -1,0 +1,6 @@
+{
+  "appId": "com.Eccdeveloper.ahorcado",
+  "appName": "Ahorcado",
+  "webDir": "dist",
+    "bundledWebRuntime": false
+  }

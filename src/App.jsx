@@ -28,7 +28,7 @@ function App() {
 
   // --- Bases de Datos ---
   "DATABASE", "CONSULTA", "INDICE", "MODELADO", "NORMALIZACION", 
-  "TRANSACCION", "ESCALABILIDAD", "SQL", "NOSQL",
+  "TRANSACCION", "ESCALABILIDAD", "SQL", "NOSQL","TRIGUER","RELACION",
 
   // --- Arquitectura y DevOps ---
   "MICROSERVICIOS", "DEVOPS", "CONTENEDOR", "DOCKER", "KUBERNETES", 
