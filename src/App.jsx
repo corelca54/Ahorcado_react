@@ -170,7 +170,9 @@ function App() {
     <div className="App">
       <header className="encabezado-app">
         <h1>JUEGO DEL AHORCADO</h1>
-        <p>Adivina la palabra relacionada con desarrollo de software e IA</p>
+        <p>Pon a prueba tu conocimiento en desarrollo de software e inteligencia artificial</p>
+        <p>escoge las letras corrrectas y arma la palabra oculta</p>
+
         
         {/* Logos de Vite y React (mantenidos del código original) */}
         <div>
@@ -199,7 +201,7 @@ function App() {
           {renderizarAhorcado()}
           <div className="letras-incorrectas">
             <p>Letras incorrectas: {letrasIncorrectas.join(', ')}</p>
-            <p>Intentos restantes: {6 - letrasIncorrectas.length}</p>
+            <p>Intentos restantes: {9 - letrasIncorrectas.length}</p>
           </div>
         </div>
 

@@ -120,7 +120,7 @@ body {
   height: 250px;
 }
 
-/* Partes del ahorcado - CORREGIDAS PARA POSICIÓN VERTICAL */
+/* ESTRUCTURA DEL AHORCADO - CORREGIDA */
 .base-ahorcado {
   position: absolute;
   bottom: 0;
@@ -130,6 +130,7 @@ body {
   height: 10px;
   background-color: white;
   border-radius: 5px;
+  z-index: 1;
 }
 
 .poste-ahorcado {
@@ -141,46 +142,49 @@ body {
   height: 200px;
   background-color: white;
   border-radius: 5px;
+  z-index: 1;
 }
 
 .travesano-ahorcado {
   position: absolute;
   top: 10px;
   left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
+  width: 80px;
   height: 10px;
   background-color: white;
   border-radius: 5px;
+  transform: translateX(-100%);
+  z-index: 1;
 }
 
 .cuerda-ahorcado {
   position: absolute;
   top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: calc(50% - 80px);
   width: 5px;
   height: 40px;
   background-color: white;
   border-radius: 2px;
+  z-index: 1;
 }
 
-/* Partes del cuerpo - CORREGIDAS para colgar de la cuerda en el eje Y */
+/* FIGURA DEL AHORCADO - COMPLETAMENTE REORGANIZADA */
+/* La figura ahora cuelga del extremo de la cuerda */
 .cabeza-ahorcado {
   position: absolute;
-  top: 60px; /* Debajo de la cuerda */
-  left: 50%;
-  transform: translateX(-50%);
+  top: 60px;
+  left: calc(50% - 80px - 2.5px + 20px); /* Centrada con la cuerda */
   width: 40px;
   height: 40px;
   border: 5px solid white;
   border-radius: 50%;
+  transform: translateX(-50%);
 }
 
 .cuerpo-ahorcado {
   position: absolute;
-  top: 100px; /* Debajo de la cabeza */
-  left: 50%;
+  top: 100px;
+  left: calc(50% - 80px - 2.5px + 20px);
   transform: translateX(-50%);
   width: 10px;
   height: 60px;
@@ -188,42 +192,52 @@ body {
   border-radius: 5px;
 }
 
-.brazo-izquierdo-ahorcado, .brazo-derecho-ahorcado {
+.brazo-izquierdo-ahorcado {
   position: absolute;
-  top: 110px; /* Alineado con la parte superior del cuerpo */
+  top: 110px;
+  left: calc(50% - 80px - 2.5px + 20px - 5px);
   width: 40px;
   height: 10px;
   background-color: white;
   border-radius: 5px;
-}
-
-.brazo-izquierdo-ahorcado {
-  left: calc(50% - 20px);
   transform: rotate(-30deg);
+  transform-origin: right center;
 }
 
 .brazo-derecho-ahorcado {
-  left: calc(50% - 20px);
-  transform: rotate(30deg);
-}
-
-.pierna-izquierda-ahorcado, .pierna-derecha-ahorcado {
   position: absolute;
-  top: 155px; /* Debajo del cuerpo */
+  top: 110px;
+  left: calc(50% - 80px - 2.5px + 20px - 5px);
   width: 40px;
   height: 10px;
   background-color: white;
   border-radius: 5px;
+  transform: rotate(30deg);
+  transform-origin: right center;
 }
 
 .pierna-izquierda-ahorcado {
-  left: calc(50% - 20px);
+  position: absolute;
+  top: 155px;
+  left: calc(50% - 80px - 2.5px + 20px - 5px);
+  width: 40px;
+  height: 10px;
+  background-color: white;
+  border-radius: 5px;
   transform: rotate(30deg);
+  transform-origin: right center;
 }
 
 .pierna-derecha-ahorcado {
-  left: calc(50% - 20px);
+  position: absolute;
+  top: 155px;
+  left: calc(50% - 80px - 2.5px + 20px - 5px);
+  width: 40px;
+  height: 10px;
+  background-color: white;
+  border-radius: 5px;
   transform: rotate(-30deg);
+  transform-origin: right center;
 }
 
 .letras-incorrectas {
@@ -234,6 +248,7 @@ body {
   background-color: rgba(255, 0, 0, 0.2);
   padding: 10px;
   border-radius: 10px;
+  z-index: 2;
 }
 
 .seccion-palabra {
@@ -305,6 +320,7 @@ body {
   padding: 10px 20px;
   border-radius: 10px;
   animation: aparecerDesaparecer 2s forwards;
+  z-index: 100;
 }
 
 @keyframes aparecerDesaparecer {
