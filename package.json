@@ -13,9 +13,9 @@
     "cap:sync": "npx cap sync"
   },
   "dependencies": {
-    "@capacitor/android": "^5.7.1",
-    "@capacitor/cli": "^7.4.3",
-    "@capacitor/core": "^5.7.1",
+    "@capacitor/android": "5.7.1",
+    "@capacitor/cli": "5.7.1",
+    "@capacitor/core": "5.7.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },
