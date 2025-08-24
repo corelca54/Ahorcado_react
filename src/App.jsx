@@ -262,7 +262,7 @@ function App() {
       
       {/* Mensaje del ejemplo original */}
       <p className="read-the-docs">
-       © {new Date().getFullYear()} <a href="URL_DE_TU_PORTAFOLIO" target="_blank">Eccdeveloper</a>. Todos los derechos reservados.
+       © {new Date().getFullYear()} <a href=" https://corelca54.github.io/Ahorcado_react/" target="_blank">Eccdeveloper</a>. Todos los derechos reservados.
 
 
       </p>
